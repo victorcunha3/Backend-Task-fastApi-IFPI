@@ -10,8 +10,8 @@ class MongoDbRepository:
         self.nivel = [1,3,5,8]
         self.prioridade = [1,2,3]
         self.situacao = ['nova','em andamento','resolvida']
-        uri = 'mongodb://localhost:27017'
-        #uri = config('MONGO_URL')
+        #uri = 'mongodb://localhost:27017'
+        uri = config('MONGO_URL')
         client = MongoClient(uri)
         db = client['tarefasWeb']
         self.tarefas = db['tarefas']
