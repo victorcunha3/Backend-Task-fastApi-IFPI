@@ -4,9 +4,7 @@ from app.models.controller import tarefa_controller, auth_controller
 
 app = FastAPI()
 
-origins = ['https://tarefas-app.onrender.com/tarefas/', 'https://tarefas-app.onrender.com/',
-           'https://tarefas-app.onrender.com/auth/signin', 'https://tarefas-app.onrender.com/auth/signup',
-           'https://incredible-baklava-5ac7c2.netlify.app/']
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
